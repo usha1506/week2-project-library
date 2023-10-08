@@ -1,0 +1,75 @@
+
+H1 {
+    justify-content: center;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    color: brown;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(185, 184, 183);
+    font-size: 10px;
+    line-height: 1px;
+}
+
+.filters {
+    display: flex;
+    justify-content: left;
+    border-color: brown;
+    border-width: 2px;
+}
+
+.filters p {
+    margin: 0 0 2px 0;
+}
+
+.filters div {
+    margin: 20px;
+}
+
+#books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.card {
+    background: lavender;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 350px;
+    height: 300px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline-start: 3px;
+    margin-inline-start: 3px;
+}   
+
+h2 {
+    margin-bottom: 10px;
+  }
+  
+button {
+    margin-top: 10px; 
+  }
+}
+h3 {
+    font-size: medium;
+    text-transform: uppercase;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 25px;
+    border-color: black;
+    border-radius: 0%;
+    margin-top: 10px;
+}
