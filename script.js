@@ -191,6 +191,7 @@ const mystery = document.getElementById("mystery");
 const fantasy = document.getElementById("fantasy");
 const horror = document.getElementById("horror");
 const container = document.getElementById("books");
+const filter21stCenturyButton = document.getElementById("filter21stCenturyButton");
 // Function to load and display the list of books.
 const loadBooks = (booksArray) => {
   container.innerHTML = "";
@@ -246,6 +247,25 @@ const loadBooks = (booksArray) => {
   });
 
 
+
+  
+//only show the books from the 21st century
+function filterBooksFrom21stCentury(booksArray) {
+  const currentYear = new Date().getFullYear(); // Get the current year
+
+  // Filter books from the 21st century (years starting from 2000 to the current year)
+  return booksArray.filter((book) => book.year >= 2000 && book.year <= currentYear);
+}
+document.getElementById("filter21stCenturyButton").addEventListener("click", () => {
+  const booksFrom21stCentury = filterBooksFrom21stCentury(books);
+  loadBooks(booksFrom21stCentury);
+});
+
+
+
+
+
+
  // Function to sort and load books in descending order of rating (highest to lowest).
 const sortBooksByRatingDescending = () => {
     const sortedBooks = [...books].sort((a, b) => b.rating - a.rating);
@@ -269,5 +289,17 @@ const sortBooksByRatingAscending = () => {
   
   // Load the initial list of books in descending order of rating when the page loads.
   sortBooksByRatingAscending();
+
+// Function to sort and load books in ascending alphabetical order.
+const sortBooksAscending = () => {
+  const sortedBooks = [...books].sort((a, b) => a.title.localeCompare(b.title));
+  loadBooks(sortedBooks);
+};
+// Attach click event listeners to buttons for sorting.
+document.getElementById("sortByAlphaAscButton").addEventListener("click", sortBooksAscending);
+
+
+
+
 
  
